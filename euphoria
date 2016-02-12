@@ -1,0 +1,28 @@
+#!/bin/sh
+
+. rc_files/rc_private.sh
+
+. rc_files/rc_public.sh
+
+. lib/lib_kernel.sh
+
+. lib/lib_ipc.sh
+. lib/lib_json.sh
+. lib/lib_logger.sh
+
+. lib/lib_euphoria.sh
+
+e_do_monitor_exit_statuses
+
+e_show_startup_notification
+
+e_check_lock_file
+
+e_do_monitor_ctrl_c
+
+e_touch_logs_directory
+e_touch_run_time_directory
+
+e_invoke_alsa_recorder ${1}
+
+e_main_euphoria

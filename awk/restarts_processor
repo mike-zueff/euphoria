@@ -1,0 +1,15 @@
+#!/usr/bin/awk
+{
+  if ($0 != "^NEW_INVOKATION$")
+  {
+    print
+  }
+  else
+  {
+    if ($0 != last_line)
+    {
+      print
+    }
+  }
+  last_line=$0
+}

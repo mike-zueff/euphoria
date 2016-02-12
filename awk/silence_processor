@@ -1,0 +1,15 @@
+#!/usr/bin/awk
+{
+  if ($0 != "^BREAK$")
+  {
+    print
+  }
+  else
+  {
+    if ($0 != last_line)
+    {
+      print
+    }
+  }
+  last_line=$0
+}

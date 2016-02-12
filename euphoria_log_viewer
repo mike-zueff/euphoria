@@ -1,0 +1,17 @@
+#!/bin/sh
+
+. rc_files/rc_public.sh
+
+. lib/lib_controller.sh
+
+c_do_monitor_exit_statuses
+
+c_disable_stdin
+
+c_check_terminal_size
+
+c_ipc_send_language_value ${1}
+
+c_touch_flag
+
+c_main_euphoria_log_viewer
