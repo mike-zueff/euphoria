@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 . rc_files/rc_private.sh
 

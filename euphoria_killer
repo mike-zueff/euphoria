@@ -1,0 +1,5 @@
+#!/bin/bash
+
+. lib/lib_killer.sh
+
+k_main_euphoria_killer
