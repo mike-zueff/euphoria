@@ -17,7 +17,7 @@ E_COMMAND_ITSELF=`ps --format command --no-headers --pid ${$}`
 E_COMMAND_SOCAT="socat UNIX-LISTEN:/tmp/run_time/${E_DIR_RUN_TIME}/euphoria_socket,fork OPEN:/tmp/run_time/${E_DIR_RUN_TIME}/language"
 E_CURL_EXTRA="--max-time 15 --request POST --silent"
 E_DEVICE=${E_LITERAL_PA}
-E_DIR_LOGS="euphoria_logs"
+E_DIR_LOGS=".cache/euphoria_logs"
 E_EXIT_STATUS_FAILURE="1"
 E_EXIT_STATUS_SUCCESS="0"
 E_HEADER="Content-Type: audio/x-flac; rate=44100;"
